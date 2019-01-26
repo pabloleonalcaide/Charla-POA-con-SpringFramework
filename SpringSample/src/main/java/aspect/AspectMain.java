@@ -10,8 +10,11 @@ import aspectTarget.ServiceOne;
 public final class AspectMain {
 
     public static void main(String[] args){
+	//Factory config
         ApplicationContext context = new AnnotationConfigApplicationContext(AspectConfig.class);
-        ServiceOne serviceOne = context.getBean(ServiceOne.class);
+
+        //getting Class ServiceOne
+	ServiceOne serviceOne = context.getBean(ServiceOne.class);
         serviceOne.method();
         serviceOne.argString("cadena");
         serviceOne.returnInt();
