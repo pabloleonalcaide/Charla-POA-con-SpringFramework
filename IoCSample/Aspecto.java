@@ -6,13 +6,13 @@ import org.springframework.stereotype.Component;
 
 @Component 
 @Aspect
-public class Aspecto{
+public class LogAspect{
 
     @After("execution(* hacer*(..))")
     public void adviceLogger(JoinPoint jp) {
-        LocalDate fecha = LocalDate.now();
-        System.out.println("Movimiento realizado el" + fecha);
-        System.out.println("En el método - " + jp.getSignature().getName());
+        LocalDate date = LocalDate.now();
+        System.out.println("Operation performed in" + date);
+        System.out.println("On method - " + jp.getSignature().getName());
     }
 
 }

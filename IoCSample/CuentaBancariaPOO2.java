@@ -1,34 +1,34 @@
 import java.time.LocalDate;
 
-public class CuentaBancariaPOO2{
+public class BankAccountPOO2{
     
-    Double saldo;
+    Double balance;
 
-    public CuentaBancariaPOO2(Double saldo){
-        this.saldo = saldo;
+    public BankAccountPOO2(Double balance){
+        this.balance = balance;
     }
     
-    public void registrarMovimiento(){
-        LocalDate fecha = LocalDate.now();
-        System.out.println("Movimiento realizado el" + fecha);
+    public void logOperation(){
+        LocalDate date = LocalDate.now();
+        System.out.println("Operation performed in" + date);
     }
     
-    public void hacerDeposito(Double cantidad){
-        if(cantidad <=0){
-            System.out.println("No hay dinero suficiente");
+    public void doDeposit(Double amount){
+        if(amount <=0){
+            System.out.println("You haven't enough money");
         }else{
-            this.saldo += cantidad;
-            registrarMovimiento();
+            this.balance += amount;
+            logOperation();
         }
     }
     
-    public void hacerTransferencia(Double cantidad, CuentaBancariaPOO2 cuentaDestino){
-        if(this.saldo < cantidad){
-            System.out.println("No hay fondos suficientes");
+    public void doTransfer(Double amount, BankAccountPOO2 accountDestiny){
+        if(this.balance < amount){
+            System.out.println("There aren't enough money");
         }else{
-            cuentaDestino.hacerDeposito(cantidad);
-            this.saldo -= cantidad;
-            registrarMovimiento();
+            accountDestiny.doDeposit(amount);
+            this.balance -= amount;
+            logOperation();
         }
     }
 }
