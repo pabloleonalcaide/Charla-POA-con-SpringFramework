@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class LogAspect{
 
-    @After("execution(* hacer*(..))")
+    @After("execution(* do*(..))")
     public void adviceLogger(JoinPoint jp) {
         LocalDate date = LocalDate.now();
         System.out.println("Operation performed in" + date);
