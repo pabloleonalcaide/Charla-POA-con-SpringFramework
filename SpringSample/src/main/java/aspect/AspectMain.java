@@ -13,8 +13,8 @@ public final class AspectMain {
 	//Factory config
         ApplicationContext context = new AnnotationConfigApplicationContext(AspectConfig.class);
 
-        //getting Class ServiceOne
-	ServiceOne serviceOne = context.getBean(ServiceOne.class);
+    //getting Class ServiceOne
+	    ServiceOne serviceOne = context.getBean(ServiceOne.class);
         serviceOne.method();
         serviceOne.argString("cadena");
         serviceOne.returnInt();

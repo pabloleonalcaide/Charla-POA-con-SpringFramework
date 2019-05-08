@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - AspectMain",
+            "request": "launch",
+            "mainClass": "aspect.AspectMain"
+        }
+    ]
+}

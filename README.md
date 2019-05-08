@@ -10,3 +10,7 @@
 
 > Ejemplo de cómo opera Spring bajo el paradigma de la POA, el objetivo es ilustrar brevemente algunos de los elementos más relevantes
 > (Aspectos, Consejos, Punto de corte, Avisos...)
+
+### AutowiringSample
+
+> Ejemplo de autowired
